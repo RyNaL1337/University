@@ -1,0 +1,43 @@
+#include<iostream>
+#include<clocale>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	double x, x1, x2, D, a, b, c;
+	cout << "Дано уравнение a*x*x+b*x+c=0" << endl;
+	cout << "Введите пожалуйста a,b и c" << endl;
+	cin >> a >> b >> c;
+
+	if (a== 0) {
+		if (b == 0) {
+			if (c == 0) {
+				cout << "x - любое произвольное число" << endl;
+			}
+			else {
+				cout << "Корней нет" << endl;
+
+			}
+		}
+		else {
+			x = -c / b;
+				cout << "x = " << x << endl;
+		}
+	}
+	else {
+		D = b * b - 4 * a * c;
+			if (D > 0) {
+				x1 = (-b + sqrt(D)) / (2 * a);
+				x2 = (-b - sqrt(D)) / (2 * a);
+				cout << "x1 = " << x1 << "\nx2= " << x2 << endl;
+
+			}
+			if (D == 0) {
+				x = -b / (2 * a);
+				cout << "x= " << x << endl;
+			}
+			if (D < 0) {
+				cout << "нет корней" << endl;
+			}
+	}
+}
