@@ -1,0 +1,42 @@
+#include<iostream>
+#include<clocale>
+using namespace std;
+
+char op;
+double a, b;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите пожалуйста a и b" << endl;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	cout << "Введите одну из следующих операции:  +   -   *   /" << endl;
+	cout << "Выбранная операция: ";
+	cin >> op;
+	switch (op) {
+
+	case '+':
+		cout << "a + b= " << a + b << endl;
+		break;
+
+	case '-':
+		cout << "a - b= " << a - b << endl;
+		break;
+
+	case '*':
+		cout << "a * b= " << a * b << endl;
+		break;
+
+	case '/':
+		cout << "a / b= " << a / b << endl;
+		break;
+
+	default:
+		cout << "Ошибка, пожалуйста повторите попытку" << endl;
+
+	}
+	return 0;
+
+}
